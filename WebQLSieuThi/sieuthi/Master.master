@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/sieuthi/BanHangOnl.master" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="BanHang_Master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <!-- Left -->
+    <div class="Left_Conten_Wapper fl">
+        <p class="Title_L_C_W fl"><img src="../img/logo/titile.png" /><span>Danh mục sản phẩm</span></p>
+        <ul class="UlDanhmuc fl">
+                <li class="LiDanhmuc">
+                <asp:DataList ID="DLDanhMuc" runat="server">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="hldanhmuc" runat="server" NavigateUrl='<%# "danhmuc.aspx?maloai="+Eval("MaLoai") %>' Text='<%# Eval("TenLoai") %>'></asp:HyperLink>
+                    </ItemTemplate>
+                </asp:DataList>
+            </li>
+            <li style="margin-bottom:70%"></li>
+        </ul><!-- End .UlDanhmuc -->
+
+        <!-- Hỗ trợ online -->
+        <div style="clear: both"></div>
+        <p class="Title_L_C_W fl"><img src="../img/logo/titile.png" /><span>Hỗ trợ online</span></p>
+
+        <div class="Online wapp100 fl">
+           
+            <p align="center" style="padding: 5px 0px;font-weight: bold;">Mrs Thanh: 0986 564 633</p>
+              <p align="center" style="padding: 5px 0px;font-weight: bold;">Mrs Lan: 0964 225 325</p>
+        </div><!-- End .Online -->
+       
+            
+          
+       
+
+    </div><!-- End .Left_Conten_Wapper -->
+    <!-- Right -->
+    <div class="Right_Conten_Wapper fl">                
+        <!-- Sản phẩm -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>             
+    </div><!-- End .Right_Conten_Wapper -->
+</asp:Content>
+

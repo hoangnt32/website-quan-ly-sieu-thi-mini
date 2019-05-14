@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BanHangOnl.master.cs" Inherits="BanHangOnl" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/skin.css" />
+    <style type="text/css">
+        .menu1{
+            color:white;
+            font-size:15px;
+        }
+        .menu1:hover{
+            color:#ffd800;
+        }
+        #td{
+            height:40px;
+        }
+        
+        #menu2 li {
+ position: relative;
+}
+        .sub-menu {
+ display: none;
+ position: absolute;
+}
+        #menu2 li:hover .sub-menu {
+ display: block;
+}
+        .sub-menu li {
+ margin-left: 0 !important;
+}
+        #menu2 li {
+  color: #ffffff;
+  display: inline-block;
+  width: 146px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+  margin: 0;
+  padding: 0;
+}
+ #menu2 ul {
+  background: #006835;
+  list-style-type: none;
+  text-align: center;
+  width:146px;
+  margin: 0;
+  padding: 0;
+}
+ #menu2 .menu1 {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+ #menu2 .menu1:hover {
+  color:#ffd800;
+}
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="All_Wapper wapp100 fl">
+            <div class="Menu_Top_Head wapp100 fl" >
+                <div class="Conten_Menu_Top_Head wapp1000">
+                    <div class="Logo fl">
+                        <asp:LinkButton ID="trangchu" runat="server" OnClick="LinkButton1_Click" CausesValidation="False"><img src="../img/logosm.png" title="Siêu Thị ABC"></asp:LinkButton>
+                    </div><!-- End .Logo -->
+                    <div class="Top_Menu_Head fl">
+                        <table width="883" border="0" align="center" cellpadding="5" cellspacing="0">
+            <tbody>
+              <tr>
+                
+                <td id="td" width="94" align="center"> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="menu1" CausesValidation="False">Trang chủ</asp:LinkButton></td>
+                <td width="91" align="center"><asp:LinkButton ID="lbgioithieu"  runat="server" OnClick="lbgioithieu_Click" CssClass="menu1" CausesValidation="False">Giới thiệu</asp:LinkButton></td>
+                <td width="81" align="center"><asp:LinkButton ID="lbllienhe"  runat="server" OnClick="lbllienhe_Click" CssClass="menu1" CausesValidation="False">Liên hệ</asp:LinkButton></td>
+                <td id="menu2" width="146" align="center"><ul><li><a href="#" class="menu1" >Đơn hàng của tôi</a>
+                                                        <ul class="sub-menu">
+                                                             <li><asp:LinkButton ID="LinkButton2"  runat="server" OnClick="lbdonhang_Click" CssClass="menu1" CausesValidation="False">Đơn hàng đã mua</asp:LinkButton></li>
+                                                            <li><asp:LinkButton ID="LinkButton3"  runat="server" OnClick="LinkButton3_Click" CssClass="menu1" CausesValidation="False">Đơn hàng đã hủy</asp:LinkButton></li>
+                                                        </ul>
+                                                   </li>
+                                               </ul></td>
+                <td width="127" align="center"><asp:HyperLink ID="hldangnhap" runat="server" CausesValidation="False" CssClass="menu1" NavigateUrl="~/dangnhap.aspx">Đăng nhập</asp:HyperLink>
+                    <asp:LinkButton ID="btndangxuat" runat="server" CausesValidation="False" CssClass="menu1" OnClick="btndangxuat_Click">Đăng xuất</asp:LinkButton>
+                </td>
+				<td width="124"><asp:HyperLink ID="hldoimatkhau" runat="server" CausesValidation="False" CssClass="menu1" NavigateUrl="~/sieuthi/doimatkhau.aspx">Đổi mật khẩu</asp:HyperLink>
+                    <asp:LinkButton ID="btndki" runat="server" OnClick="btndki_Click" CausesValidation="False" CssClass="menu1">Đăng ký</asp:LinkButton>
+                   
+				</td>
+				<td width="168"><asp:LinkButton ID="lbhoso"  runat="server" CssClass="menu1" OnClick="lbhoso_Click" CausesValidation="False"><asp:Label ID="lbltendn" runat="server" Text=""></asp:Label></asp:LinkButton></td>
+              </tr>
+              <tr>
+                <td colspan="5" align="center">
+                  <table width="418" border="0" align="center" cellpadding="5" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td width="308" align="center"><asp:TextBox ID="txttk" placeholder="Nhập từ khóa cần tìm..." style="width:95%;padding:4px;height:21px;font-size:14px;" runat="server" AutoCompleteType="Search"></asp:TextBox></td>
+                        <td width="94" align="center"><asp:Button ID="btntim" runat="server" style="width:90%;margin-left:-13px;padding:8px 10px;border:0;cursor:pointer;background-color:#D3D1D1;color:#000;text-decoration:none;" Text="Tìm kiếm" OnClick="btntim_Click" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td align="center">&nbsp;</td>
+                <td id="menu1"><asp:LinkButton ID="btngiohang" runat="server" OnClick="btngiohang_Click" CssClass="menu1" CausesValidation="False">Giỏ hàng (<asp:Label ID="lblsp" runat="server" Text="0"></asp:Label>)</asp:LinkButton>
+                  <div style="line-height:30px;color:#fff;font-size:13px;">Tổng tiền: <asp:Label ID="lbltt" runat="server" Text="0"></asp:Label> VNĐ</div></td>
+              </tr>
+            </tbody>
+          </table>
+            
+                    </div><!-- End .Top_Menu_Head -->
+                     
+                </div><!-- End .Conten_Menu_Top_Head -->
+            </div><!-- .Menu_Top_Head -->
+            <div style="height: 120px;"></div>
+            <div class="All_Conten_Wapper wapp100 fl">
+                <div class="Conten_Wapper wapp1000">
+                    <div class="Add_Conten_Wapper wapp100 fl">
+                         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        <div style="clear:both"></div>
+                        <!-- Footer -->
+                        <div class="Footer_Conten_Wapper wapp100 fl">
+                            <div class="Cnt_F_C_W fl">
+                                <div class="Left_Cnt_F_C_W fl">
+                                    <ul class="UlDanhmuc_2">
+                                        <li class="LiDanhmuc_2"><a href="../trangchu.aspx">Trang chủ |</a></li>
+                                        <li class="LiDanhmuc_2"><asp:LinkButton ID="Lbhdmh"  runat="server" OnClick="Lbhdmh_Click" CausesValidation="False">Hướng dẫn mua hàng |</asp:LinkButton></li>
+                                        <li class="LiDanhmuc_2"><asp:LinkButton ID="lh"  runat="server" OnClick="lbllienhe_Click" CausesValidation="False">Liên hệ</asp:LinkButton></li>
+                                    </ul>
+                                </div><!-- End .Left_Cnt_F_C_W -->
+                                <div class="Right_Cnt_F_C_W fl">
+                                    <p>
+                                        <b style="font-size: 14px; text-transform: uppercase">Siêu thị ABC</b><br>
+                                        Địa chỉ: 983 Đại lộ Bình Dương TP Thủ Dầu Một Bình Dương<br>
+                                        Email: sieuthihn@gmail.com<br>
+                                        Điện thoại: 0972 352 598
+                                    </p>
+                                </div><!-- End .Right_Cnt_F_C_W -->
+                            </div><!-- End .Cnt_F_C_W -->
+                        </div><!-- End .Footer_Conten_Wapper -->
+
+                    </div><!-- End .Add_Conten_Wapper -->
+                </div><!-- End .Conten_Wapper -->
+            </div><!-- End .Conten_Wapper -->
+        </div><!-- End .All_Wapper -->
+        
+    </div>
+    </form>
+
+   <%-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="position:fixed; z-index:9999999; right:10px; bottom:10px;" class="fb-page" data-tabs="messages" data-href="m.me/2257170260972373" data-width="250" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>--%>
+    
+    <script src="https://dochat.vn/code.js?id=9190505113231916007" style="height:100px;"></script>
+
+</body>
+</html>

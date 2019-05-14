@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <div id="timkiem" class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list" style="height:70px;">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <div style="margin-bottom:10px;">
+                                                <asp:Label ID="lbltk" runat="server" Text="Tìm kiếm theo" Visible="false"></asp:Label>
+                                                <asp:DropDownList ID="cmbtk" Height="33" Visible="false" runat="server" OnTextChanged="cmbtk_TextChanged"  AutoPostBack="True">
+                                                   
+                                                </asp:DropDownList>
+                                            </div>
+                                            <span style="position:relative; bottom:10px;">
+                                            <form role="search" class="sr-input-func">
+                                                <asp:TextBox ID="txttimkiem" style="width:60%" runat="server" CssClass="search-int form-control"></asp:TextBox>
+                                               <asp:ImageButton ID="btntimkiem" runat="server" style="position:relative; bottom:27px; left:53.5%" ImageUrl="~/images/icon_find.png" Height="20px" Width="20px" CausesValidation="False" OnClick="btntimkiem_Click" />
+                                               
+                                            </form>
+                                                </span>
+                                            <div style="position:relative; left:230px;bottom:43px; width:100%">
+                                            <div class="date-picker-inner" style="margin-bottom:-30px;">
+                                    <div class="form-group data-custon-pick data-custom-mg" id="data_5">
+                                        
+                                        <div class="input-daterange input-group" id="datepicker">
+                                            <asp:TextBox ID="start" CssClass="form-control" required="required" runat="server" data-viewformat="dd/MM/yyyy" Visible="false" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:Label ID="lblto" style="position:relative;left:8px" CssClass="input-group-addon" runat="server" Text="đến" Visible="false"></asp:Label>
+                                           <asp:TextBox ID="end" CssClass="form-control" required="required" runat="server" Visible="false" AutoCompleteType="Disabled"></asp:TextBox>
+                                        </div>
+                                         <asp:Button ID="btnLoc" style="margin-top:5px;border:0;width:70px;height:33px;color:white;background-color:#356ff8;margin-left:102%;position:relative;bottom:38px" runat="server" Text="Lọc" OnClick="btnLoc_Click" Visible="False" />                                      
+                                    </div>
+                                </div>
+                                                 <span style="position:relative; bottom:10px;top:30px;">
+                                            
+                                                <asp:TextBox ID="txtgtri" required="required" style="width:60%; padding:3px 5px" runat="server" Height="33" Visible="false" ></asp:TextBox>
+                                               <asp:Button ID="btntim" Visible="false" style="margin-top:5px;border:0;width:70px;height:33px;color:white;background-color:#356ff8;margin-left:62%;position:relative;bottom:38px" runat="server" Text="Lọc" OnClick="btntim_Click" />                                      
+                                            
+                                                </span>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+     
+</asp:Content>
+

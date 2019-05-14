@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'icoMoon';
+    src: url(//raw.githubusercontent.com/Keyamoon/IcoMoon-Free/master/Font/IcoMoon-Free.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.educate-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'IcoMoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.educate-danger:before {
+  content: "\e91b";
+}
+.educate-info:before {
+  content: "\e91c";
+}
+.educate-warning:before {
+  content: "\e91d";
+}
+.educate-star:before {
+  content: "\e919";
+}
+.educate-star-half:before {
+  content: "\e91a";
+}
+.educate-apps:before {
+  content: "\e900";
+}
+.educate-bell:before {
+  content: "\e901";
+}
+.educate-charts:before {
+  content: "\e99a";
+}
+.educate-checked:before {
+  content: "\e903";
+}
+.educate-cloud:before {
+  content: "\e904";
+}
+.educate-comment:before {
+  content: "\e905";
+}
+.educate-course:before {
+  content: "\e920";
+}
+.educate-data-table:before {
+  content: "\e907";
+}
+.educate-department:before {
+  content: "\e926";
+}
+.educate-event:before {
+  content: "\e972";
+}
+.educate-form:before {
+  content: "\e90a";
+}
+.educate-home:before {
+  content: "\e976";
+}
+.educate-interface:before {
+  content: "\e95c";
+}
+.educate-landing:before {
+  content: "\e90d";
+}
+.educate-library:before {
+  content: "\e922";
+}
+.educate-menu:before {
+  content: "\e90f";
+}
+.educate-message:before {
+  content: "\e910";
+}
+.educate-miscellanous:before {
+  content: "\e911";
+}
+.educate-nav:before {
+  content: "\e9bd";
+}
+.educate-pages:before {
+  content: "\e913";
+}
+.educate-professor:before {
+  content: "\e9b0";
+}
+.educate-project:before {
+  content: "\e915";
+}
+.educate-search:before {
+  content: "\e916";
+}
+.educate-settings:before {
+  content: "\e917";
+}
+.educate-student:before {
+  content: "\e92e";
+}
+.educate-price-tag:before {
+  content: "\e935";
+}
+.educate-price-tags:before {
+  content: "\e936";
+}
+.educate-users:before{
+    content: "\e971";
+}
+
