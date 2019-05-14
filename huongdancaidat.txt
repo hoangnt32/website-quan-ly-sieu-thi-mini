@@ -1,0 +1,10 @@
+﻿
+****************** Xây dựng website quản lý siêu thị mini ***********************
+*										*
+*	- Mở Microsoft SQL Server 2012 và attack file .mdf vào			*
+*	- Cài đặt DevExpress 16.1						*
+*	- Dùng Visual Studio mở file .sln (chú ý: phiên bản 2015 trở lên)	*
+*	- Đổi chuỗi kết nối trong web.config và chạy thử			*
+*										*
+*********************************************************************************
+
